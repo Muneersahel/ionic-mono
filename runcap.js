@@ -42,7 +42,7 @@ const CAPACITOR_CONFIG_FILE = 'capacitor.config.ts';
 // Create the bare capacitor.config.ts for the given project
 fs.writeFileSync(
   CAPACITOR_CONFIG_FILE,
-  capacitorConfig.replace("<project>", args.project)
+  capacitorConfig.replace(/<project>/g, args.project)
 );
 
 // Copy the project specific capacitor config file into 
